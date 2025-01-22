@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Knewave&family=Smooch+Sans:wght@100..900&display=swap');
+
+
+.josefin-sans-joss {
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.smooch-sans-sm {
+  font-family: "Smooch Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: gray;
+    font-family: "Josefin Sans";
+    text-transform: capitalize;
+}
+
+.body{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 20px;
+}
+form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formline{
+    margin: 10px auto;
+    font-family: "sm";
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    gap: 30px;
+}
+.pm{
+    width: 25px;
+}.gm{
+    width: 45px;
+}
+input{
+
+ font-size: 13px;
+ border-radius: 4px;
+ line-height: 1.5;
+ padding: 5px 10px;
+ transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+ border: 2px solid #dee1e2;
+ color: rgb(14, 14, 16);
+ background: #dee1e2;
+ display: block;
+ height: 30px;
+ :hover {
+  border-color: #ccc;
+  }
+  :focus{
+  border-color: #9147ff;
+  background: #fff;
+}               
+}

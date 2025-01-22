@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="../style.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>voitures</title>
@@ -19,7 +20,7 @@
             $color='green';
         }else $color='red';
     echo "<div class='card' style='border:1px solid ".$color.";'>
-          <img src='../photos/".$voi['photo']."' alt='' />
+          <img src=".$voi['photo']." alt='' />
           <ul>
             <li>".$voi['marque']."</li>
             <li>".$voi['model']."</li>
