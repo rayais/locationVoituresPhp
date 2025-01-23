@@ -47,10 +47,7 @@
                         <label for="model">Modèle</label>
                         <input value="<?= $v['model'] ?>" type="text" name="model" required>
                     </div>
-                    <div class="formline">
-                        <label for="photo">Photo</label>
-                        <input type="file" name="photo" accept="image/*">
-                    </div>
+                    
                     <div class="formline">
                         <label for="annee">Année de fabrication</label>
                         <input value="<?= $v['annee_de_fabrication'] ?>" type="number" name="annee" min="2010" max="<?= date('Y') ?>" required>

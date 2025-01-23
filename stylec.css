@@ -24,7 +24,8 @@ body{
     text-transform: capitalize;
 }
 img{
-    width: 100px;
+    width: 40%;
+    border-radius: 5%;
 }
 .body{
     width: 80%;
@@ -75,4 +76,24 @@ input{
   background: #fff;
 }
 }
+.card{
+    margin-top: 20px;
+    border-radius: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+ul{
+    list-style: circle;
+}
+li{
+    padding: 5px;
+}
+h3{
+    height: 100%;
+    margin: 10px;
+    
+}
+
               

@@ -73,7 +73,7 @@
     $gmat=$_POST['gmat'];
     $marque=$_POST['marque'];
     $model=$_POST['model'];
-    $status="libre";
+    $status="Disponible";
     //$photo=$_FILES['photo']['tmp_name'].".jpg";
     var_dump($_FILES['photo']['error']);
     $annee=$_POST['annee'];
