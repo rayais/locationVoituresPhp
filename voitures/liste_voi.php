@@ -26,8 +26,10 @@
             <li>".$voi['marque']."</li>
             <li>".$voi['model']."</li>
             <li>".$voi['annee_de_fabrication']."</li>
+            <li>".$voi['prix']."</li>
           </ul>
           <h3 style='color: ".$color.";'>".$voi['status']."</h3>
+          
         </div>
     ";
     }}

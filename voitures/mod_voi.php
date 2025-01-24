@@ -47,6 +47,10 @@
                         <label for="model">Modèle</label>
                         <input value="<?= $v['model'] ?>" type="text" name="model" required>
                     </div>
+                    <div class="formline">
+                        <label for="prix">Prix</label>
+                        <input value="<?= $v['prix'] ?>" type="text" name="prix" required>
+                    </div>
                     
                     <div class="formline">
                         <label for="annee">Année de fabrication</label>

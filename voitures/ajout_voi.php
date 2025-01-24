@@ -34,6 +34,10 @@
                 <input type="file" name="photo" >
             </div>
             <div class="formline">
+                <label for="prix">prix</label>
+                <input type="number" name="prix" >
+            </div>
+            <div class="formline">
                 <input type="submit"id="btn" value="ajouter">
                 <input type="reset"id="btn" value="annuler">
             </div>
@@ -73,13 +77,14 @@
     $gmat=$_POST['gmat'];
     $marque=$_POST['marque'];
     $model=$_POST['model'];
+    $prix=$_POST['prix'];
     $status="Disponible";
     //$photo=$_FILES['photo']['tmp_name'].".jpg";
     var_dump($_FILES['photo']['error']);
     $annee=$_POST['annee'];
     $matricule=$pmat."tu".$gmat;
     $req="insert into voiture values(
-    '$matricule','$marque','$model','$status','$photo','$annee')";
+    '$matricule','$marque','$model','$status','$photo','$annee','$prix')";
     if($con->query($req))
     echo "<script>alert('voiture ajouter avec succée')</script>";
     else echo "<script>alert('problemme in req')</script>";}

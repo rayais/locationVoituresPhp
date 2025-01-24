@@ -11,13 +11,14 @@
         <h1>Trouver voiture(s)</h1>
         <form action="rech_voi.php" method="post">
             <div class="formline">
-                <label for="critére">choisir un critére</label>
+                <label for="critére">choisir un critère</label>
                 <select name="critere" id="">
                     <option value="matricule">matricule</option>
                     <option value="marque">marque</option>
                     <option value="model">model</option>
                     <option value="status">statut</option>
                     <option value="annee_de_fabrication">année de fabrication</option>
+                    <option value="prix">prix</option>
                 </select>
             </div>
             <div class="formline">
@@ -41,7 +42,7 @@
         else 
         {
             foreach($list as $voi){
-                if ($voi['status']=='libre') {
+                if ($voi['status']=='Disponible') {
                     $color='green';
                 }else $color='red';
                 echo "<div class='card' style='border:1px solid ".$color.";'>
@@ -51,6 +52,7 @@
                 <li>".$voi['marque']."</li>
                 <li>".$voi['model']."</li>
                 <li>".$voi['annee_de_fabrication']."</li>
+                <li>".$voi['prix']."</li>
                 </ul>
                 <h3 style='color: ".$color.";'>".$voi['status']."</h3>
                 </div>

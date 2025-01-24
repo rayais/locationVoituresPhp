@@ -20,10 +20,11 @@ require_once("../connection.php");
      }
  
     $annee=$_POST['annee'];
+    $prix=$_POST['prix'];
     
 
     $req="UPDATE voiture 
-SET marque = '$marque', model = '$model', status = '$status', annee_de_fabrication = '$annee' 
+SET marque = '$marque',prix= '$prix', model = '$model', status = '$status', annee_de_fabrication = '$annee' 
 WHERE matricule ='$matricule' ";
     if($con->query($req))echo"<script>alert('voiture modifier')</script>";
     else echo"<script>alert('req error')</script>";

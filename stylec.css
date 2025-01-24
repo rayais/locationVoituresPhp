@@ -92,8 +92,13 @@ li{
 }
 h3{
     height: 100%;
-    margin: 10px;
-    
+    margin: 10px;  
+}
+.prix{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
               

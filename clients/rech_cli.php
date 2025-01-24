@@ -4,20 +4,20 @@
     <link rel="stylesheet" href="../stylec.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trouver voiture</title>
+    <title>Trouver client</title>
 </head>
 <body>
     <div class="body">
-        <h1>Trouver voiture(s)</h1>
-        <form action="rech_voi.php" method="post">
+        <h1>Trouver client(s)</h1>
+        <form action="rech_cli.php" method="post">
             <div class="formline">
-                <label for="critére">choisir un critére</label>
+                <label for="critere">choisir un critére</label>
                 <select name="critere" id="">
-                    <option value="matricule">matricule</option>
-                    <option value="marque">marque</option>
-                    <option value="model">model</option>
-                    <option value="status">statut</option>
-                    <option value="annee_de_fabrication">année de fabrication</option>
+                    <option value="num_permit">num permit</option>
+                    <option value="nom">nom</option>
+                    <option value="prenom">prenom</option>
+                    <option value="tel">numero telephone</option>
+                    
                 </select>
             </div>
             <div class="formline">
@@ -35,26 +35,24 @@
         $con=connect();
         $critere=$_POST['critere'];
         $val=$_POST['valeur'];
-        $list= $con->query("select * from voiture where $critere like '%$val%' ");
+        echo $critere;
+        $list= $con->query("select * from clients where $critere like '%$val%' ");
         
         if(!$list) echo "<script>alert('eroor de req')</script>";
         else 
         {
             foreach($list as $voi){
-                if ($voi['status']=='libre') {
-                    $color='green';
-                }else $color='red';
-                echo "<div class='card' style='border:1px solid ".$color.";'>
-                <img src=".$voi['photo']." alt='' />
-                <ul>
-                <li>".$voi['matricule']."</li>
-                <li>".$voi['marque']."</li>
-                <li>".$voi['model']."</li>
-                <li>".$voi['annee_de_fabrication']."</li>
-                </ul>
-                <h3 style='color: ".$color.";'>".$voi['status']."</h3>
-                </div>
-                ";
+                echo "<div class='card' style='border:1px solid ;'>
+          
+          <ul>
+          <li>prenom: ".$voi['prenom']."</li>
+          <li>nom: ".$voi['nom']."</li>
+          <li>tel: ".$voi['tel']."</li>
+          <li>permit: ".$voi['num_permit']."</li>
+          </ul>
+           <h3 ><a href=".$voi['permit']." download>telecharger permit</a></h3>
+        </div>
+    ";
             }}}
             ?>
             </div>
